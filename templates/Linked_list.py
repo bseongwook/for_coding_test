@@ -43,3 +43,5 @@ class LinkedList(object):
         else:
             self.tail.next = new_node
             self.tail = self.tail.next
+
+# linkedlist는 tree에서 많이 사용되므로 이것만 코테에 나오는 것은 아님
