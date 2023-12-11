@@ -33,7 +33,7 @@ class ListNode(object):
 class BrowserHistory:
 
     def __init__(self, homepage: str):
-        self.head = self.current = ListNode(val = homepage)
+        self.head = self.current = ListNode(val = homepage) # 얘를 두 개로 나눠 쓰면 node가 2개가 생성됨
 
     def visit(self, url: str): 
         self.current.next = ListNode(val = url, prev=self.current)
