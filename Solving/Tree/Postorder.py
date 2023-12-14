@@ -5,6 +5,8 @@
 
 # 아래의 코드에서 하나의 노드도 작은 트리 취급
 
+# 일종의 template으로 여기기
+
 # postorder 순회 방식
 def LCA(root, p, q):
     if root == None:
