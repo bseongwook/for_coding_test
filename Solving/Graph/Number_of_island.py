@@ -20,7 +20,7 @@ def numIsland(grid):
         queue = deque((x, y))
         while queue: # 큐가 전부 소진될때까지
             cur_x, cur_y = queue.popleft()
-            for i in range(4)
+            for i in range(4):
                 next_x = cur_x + dx[i]
                 next_y = cur_y + dy[i]
                 if visited and 0 <= next_x <= m and 0 <= next_y <= n \
