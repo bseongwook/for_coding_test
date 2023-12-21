@@ -4,6 +4,10 @@
 # m행, n열
 
 # b, d 모두 풀이 가능
+
+# visited를 따로 생성하지 않고 grid 자체를 변형해도 상관은 없지만,
+# 나중에 디버그 힘들어질수도 있음
+
 from collections import deque
 
 def numIsland(grid):
