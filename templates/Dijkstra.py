@@ -3,6 +3,7 @@ import heapq
 def dijkstra(graph, start, final): # start, final은 노드 이름
     costs = {}
     pq = []   # 우선순위 큐
+    heapq.heapify(pq)
     heapq.heappush(pq, (0, start))
 
     while pq:
@@ -23,3 +24,10 @@ def dijkstra(graph, start, final): # start, final은 노드 이름
 #         5. 현재 노드와 연결된 노드 우선순위 큐에 추가
 # 6. 큐가 비면 목적지에 기록된 비용 반환
 
+lst = []
+heapq.heapify(lst)
+heapq.heappush(lst, 3)
+heapq.heappush(lst, 2)
+heapq.heappush(lst, 1)
+print(lst)
+print(type(lst))
