@@ -20,7 +20,6 @@ def permute(nums):
     return ans
 
 
-
 # nums = [1,2,3,4]에서
 # 2개의 뭔소로 만들 수 있는 모든 순열을 반환하시오
 
