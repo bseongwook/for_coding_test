@@ -14,7 +14,7 @@ def permute(nums):
                 curr.append(num)
                 backtrack(curr)
                 curr.pop()
-    
+
     ans = []
     backtrack()
     return ans
@@ -63,3 +63,4 @@ def sub_combinate(nums, k):
     return result
 
 
+# # 라이브러리 사용하지 말고 직접 nCr 계열 구현하기
