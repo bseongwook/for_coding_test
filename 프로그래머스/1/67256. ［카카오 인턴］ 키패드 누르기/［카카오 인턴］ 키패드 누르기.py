@@ -17,6 +17,7 @@ def solution(numbers, hand):
             answer += 'R'
         else: # 2,5,8,0
             # 거리 측정 - 피타고라스는 대각선이라 안됨
+            # (l_hand[0]-dic[num][0])**2 + (l_hand[1]-dic[num][1])**2 불가능
             l_dist = abs(l_hand[0]-dic[num][0]) + abs(l_hand[1]-dic[num][1])
             r_dist = abs(r_hand[0]-dic[num][0]) + abs(r_hand[1]-dic[num][1])
             print(l_dist, r_dist)
