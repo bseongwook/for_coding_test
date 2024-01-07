@@ -4,17 +4,13 @@ def solution(today, terms, privacies):
     
     answer = []
     
-    t_year = int(today.split('.')[0])
-    t_month = int(today.split('.')[1])
-    t_day = int(today.split('.')[2])
+    t_year, t_month, t_day = map(int, today.split('.'))
     
     # day 기준으로 계산할 것 / 1년은 336일, 1달은 28일
     for idx, p in enumerate(privacies):
         val_month = int(terms_dic[ p.split()[1] ]) # 해당 p의 약관 종류에 대한 유효기간
         
-        p_year = int(p.split()[0].split('.')[0])
-        p_month = int(p.split()[0].split('.')[1])
-        p_day = int(p.split()[0].split('.')[2])
+        p_year, p_month, p_day = map(int, p.split()[0].split('.'))
         
         if (t_year*336 + t_month*28 + t_day) - (p_year*336 + p_month*28 + p_day) >= val_month * 28:
             answer.append(idx+1)
