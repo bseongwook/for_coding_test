@@ -1,7 +1,6 @@
-from collections import deque
-import math
-
 def solution(progresses, speeds):
+    
+    # 너무 비효율적인 풀이 
     
     idx = 0
     answer = []
