@@ -1,7 +1,6 @@
 
 def solution(brown, yellow):
-    answer = []
-        
+    
     for y_col in range(1, yellow+1):
         if yellow % y_col == 0: # 약수라면
             y_row = yellow // y_col
