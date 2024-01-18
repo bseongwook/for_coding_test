@@ -1,6 +1,6 @@
 # [level 2] 주식가격 - 42584 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42584#) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42584) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 3일 20:49:44
+2024년 1월 4일 11:5:22
 
 ### 문제 설명
 
