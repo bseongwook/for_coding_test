@@ -19,7 +19,7 @@ def solution(expression):
     num_lst_og.append(int(temp))
     # num_lst_og = [50, 6, 3, 2]
     # oper_lst_og = ['*', '-', '*']     
-    # print(oper_lst.index('*'))
+    # print(oper_lst.index('*')) 
     
     operation_candidates = permutations(['*', '-', '+'])
     
