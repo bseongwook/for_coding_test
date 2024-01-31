@@ -7,7 +7,7 @@ def solution(files):
         TAIL = ''
         done_head = False
         done_number = False
-        # 숫자가 6개인 경우도 고려
+        # 숫자가 6개인 경우도 고려 - 붙어있진 않았음
         for f in file:
             if not done_head and not f.isdigit():
                 HEAD += f
