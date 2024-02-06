@@ -54,8 +54,6 @@ def solution(m, n, board):
                     if have_switch:
                         map_[row + go_down - 1][col][0], map_[row][col][0] =\
                         map_[row][col][0], map_[row + go_down - 1][col][0]
-
-        # print(map_)
         
     answer = 0  
     for r in range(m):
