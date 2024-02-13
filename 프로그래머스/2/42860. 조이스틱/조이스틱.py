@@ -39,25 +39,49 @@
 #                     return answer
 #     return answer
 
+    # def solution(name):
+    # # 두번 꺽는 경우는 고려하지 않음
+
+    #     if set(name) == {'A'}:
+    #         return 0
+
+    #     a_pos = ord('A') # 'A' : 65, 'Z' : 90
+    #     z_pos = ord('Z')
+
+    #     answer = float('inf')
+
+    #     for i in range(len(name)//2 + 1):
+    #         l_r = name[-i:] + name[:-i] #왼쪽먼저 갔다가 + 오른쪽
+    #         r_l = name[i: :-1] + name[i+1:][::-1] # 기준점에서 빠꾸 + 좌측
+    #         for n in [l_r,r_l]:
+    #             # 끝에 A들은 셀 필요 없으므로 자르기
+    #             while n and n[-1] == 'A':
+    #                 n = n[:-1]
+    #             cnt = [min(ord(c)-a_pos, (z_pos+1) - ord(c)) for c in n ]
+    #             answer = min(answer, i + (len(cnt)-1) + sum(cnt))
+
+#     return answer
+
+
+
 def solution(name):
-# 두번 꺽는 경우는 고려하지 않음
+    answer = 0
+    n = len(name)
 
-    if set(name) == {'A'}:
-        return 0
+    def alphabet_to_num(char):
+        num_char = [i for i in range(14)] + [j for j in range(12, 0, -1)]
+        return num_char[ord(char) - ord('A')]
 
-    a_pos = ord('A') # 'A' : 65, 'Z' : 90
-    z_pos = ord('Z')
+    for ch in name:
+        answer += alphabet_to_num(ch)
 
-    answer = float('inf')
+    move = n - 1
+    for idx in range(n):
+        next_idx = idx + 1
+        while (next_idx < n) and (name[next_idx] == 'A'):
+            next_idx += 1
+        distance = min(idx, n - next_idx)
+        move = min(move, idx + n - next_idx + distance)
 
-    for i in range(len(name)//2 + 1):
-        l_r = name[-i:] + name[:-i] #왼쪽먼저 갔다가 + 오른쪽
-        r_l = name[i: :-1] + name[i+1:][::-1] # 기준점에서 빠꾸 + 좌측
-        for n in [l_r,r_l]:
-            # 끝에 A들은 셀 필요 없으므로 자르기
-            while n and n[-1] == 'A':
-                n = n[:-1]
-            cnt = [min(ord(c)-a_pos, (z_pos+1) - ord(c)) for c in n ]
-            answer = min(answer, i + (len(cnt)-1) + sum(cnt))
-
+    answer += move
     return answer
