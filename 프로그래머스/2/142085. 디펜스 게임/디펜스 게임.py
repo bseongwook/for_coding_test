@@ -25,7 +25,7 @@ def solution(n, k, enemy):
     for i, e in enumerate(enemy):
         heapq.heappush(h, e)
         if len(h) > k:
-            n -= heapq.heappop(h)
+            n -= heapq.heappop(h) # 왜 최소힙으로 빼는거? 최대힙써야 되는게 아니라?
         if n < 0:
             return i
 
